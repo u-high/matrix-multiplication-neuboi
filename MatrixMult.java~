@@ -1,8 +1,15 @@
 public class MatrixMult{
   
-  public void calculate(int[][] m1, int[][] m2){
-   
+  public static int[][] calculate(int[][] m1, int[][] m2){
     
+    int [][] answer = new int[m1.length][m2.length];
     
+    for(int v = 0; v < m2.length; v++){
+      for(int g = 0; g < m2.length; g++){
+        answer[v][g] = (m1[v][g]*m2[g][v]) + (m1[g][v]*m2[v][g]);
+      }
+    }
+    
+    return answer;
   }
 }
